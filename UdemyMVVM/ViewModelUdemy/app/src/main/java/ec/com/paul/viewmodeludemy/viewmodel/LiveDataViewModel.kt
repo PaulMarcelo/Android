@@ -23,8 +23,9 @@ class LiveDataViewModel : ViewModel() {
 
     fun addUser(user:User){
         userList!!.add(user)
-        userListLiveData!!.value = userList
-        userListLiveData!!.postValue(userList) // si se necesita actualizar algun valor desde un hilo de background
+        //si hay observadores activos actualizan los valores en la UI
+        userListLiveData!!.value = userList //se llama en el hilo principal de la aplicacion
+        //userListLiveData!!.postValue(userList) // si se necesita actualizar algun valor desde un hilo de background
     }
 
 }

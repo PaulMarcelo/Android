@@ -26,21 +26,21 @@ class LiveDataActivity : AppCompatActivity() {
         btSave.setOnClickListener {
             if (numero == 0) {
                 val user = User()
-                user.edad = "Alberto"
-                user.nombre = "30"
+                user.nombre = "Alberto"
+                user.edad = "30"
                 Log.d("TAG1", "numero0")
                 liveDataViewModel.addUser(user)
             }
             if (numero == 1) {
                 val user = User()
-                user.edad = "Maria"
-                user.nombre = "23"
+                user.nombre = "Maria"
+                user.edad = "23"
                 liveDataViewModel.addUser(user)
             }
             if (numero == 2) {
                 val user = User()
-                user.edad = "Manuel"
-                user.nombre = "40"
+                user.nombre = "Manuel"
+                user.edad = "40"
                 liveDataViewModel.addUser(user)
             }
             numero++
