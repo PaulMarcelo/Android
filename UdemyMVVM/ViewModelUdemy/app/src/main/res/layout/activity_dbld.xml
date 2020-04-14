@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="ec.com.paul.viewmodeludemy.viewmodel.DBLDViewModel"/>
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.DBLDActivity">
+
+        <TextView
+                android:text="@{viewModel.user.nombre}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:visible="@{viewModel.visible}"
+                app:size="@{viewModel.size}"/>
+
+        <TextView
+                android:text="@{viewModel.user.edad}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:visible="@{viewModel.visible}"
+                app:size="@{viewModel.size}"/>
+
+        <Button
+                android:onClick="@{()->viewModel.updateUser()}"
+                android:text="Actualizar Usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:text="Visibilidad"
+                android:onClick="@{()->viewModel.changeVisibility()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
