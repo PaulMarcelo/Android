@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class WSConfig {
     companion object{
-        private const val BASE_URL = "http://192.168.100.25:8080/"
+        private const val BASE_URL = "http://localhost:8080/"
         fun getRetrofit(): Retrofit? {
             val gson: Gson = GsonBuilder()
                 .setLenient()
